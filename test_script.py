@@ -1,6 +1,4 @@
-def test_1():
-	print("1")
-
-
-if __name__=="__main__":
-	test_1()
+def test_find_panda(browser):
+	browser.get("https://plugins.jenkins.io/shiningpanda")
+	header_name = browser.find_element_by_xpath("//*[@class='title-wrapper']/h1")
+	assert header_name == "ShiningPanda"
